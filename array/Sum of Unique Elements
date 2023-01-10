@@ -1,0 +1,14 @@
+class Solution {
+public:
+    int sumOfUnique(vector<int>& nums) {
+        unordered_map<int,int>mpp;int sum=0;
+        for(auto n:nums)
+        {
+            mpp[n]++;
+        }for(auto itr:mpp)
+        {
+            if(itr.second<=1)sum+=itr.first;
+        }return sum;
+        
+    }
+};
